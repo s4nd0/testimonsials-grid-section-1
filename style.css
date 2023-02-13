@@ -1,0 +1,193 @@
+:root
+{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-grayish-blue);
+    font-family: 'Barlow Semi Condensed';
+}
+
+main 
+{
+    width: 87%;
+    max-width: 1100px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.item
+{
+    padding: 1.5rem 2rem 2.5rem;
+    border-radius: .7rem;
+}
+.white 
+{
+    color: hsl(0, 0%, 81%);
+}
+.dark 
+{
+    color: hsl(219, 29%, 14%);
+}
+.verified
+{
+    opacity: 50%;
+}
+.item-text p 
+{
+    opacity: 70%;
+}
+
+.item-header
+{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.item-header .icon 
+{
+    display: block;
+    background-position: center;
+    background-size: cover;  
+    height: 30px; 
+    width: 30px;
+    border-radius: 2rem;   
+    margin-right: 1rem;
+}
+
+
+#daniel-clifford
+{
+    background-image: url(./images/image-daniel.jpg);
+    border: 2px solid hsl(263, 62%, 67%);
+}
+#jonathan-walters
+{
+    background-image: url(./images/image-jonathan.jpg);
+    border: 2px solid hsl(217, 13%, 50%);
+}
+#jeanette-harmon
+{
+    background-image: url(./images/image-jeanette.jpg);
+    border: 2px solid hsl(0, 0%, 81%);
+}
+#patrick-abrams
+{
+    background-image: url(./images/image-patrick.jpg);
+    border: 2px solid hsl(263, 62%, 67%);
+}
+#kira-whittle
+{
+    background-image: url(./images/image-kira.jpg);
+    border: 2px solid hsl(0, 0%, 81%);
+}
+
+.item-text h2 
+{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.item-text p
+{
+    font-size: .8rem;
+    line-height: 1.4;
+}
+
+
+.bg-violet 
+{
+    background-color: var(--moderate-violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 25px;
+}
+.bg-gray
+{
+    background-color: var(--very-dark-grayish-blue);
+}
+.bg-white
+{
+    background-color: white;
+}
+.bg-blue
+{
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.attribution
+{
+    font-family: 'Barlow Semi Condensed';
+    font-size: 1rem;
+    color: var(--very-dark-blackish-blue);
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.attribution a
+{
+    text-decoration: none;
+    color: var(--moderate-violet);
+}
+.attribution a:hover 
+{
+    text-decoration: underline;
+}
+
+@media screen and (min-width:800px)
+{
+    main 
+    {
+        grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+
+        column-gap: 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #daniel
+    {
+        grid-area: daniel;
+    }
+    #jonathan
+    {
+        grid-area: jonathan;
+    }
+    #kira
+    {
+        grid-area: kira;
+    }
+    #jeanette
+    {
+        grid-area: jeanette;
+    }
+    #patrick
+    {
+        grid-area: patrick;
+    }
+}
+
+
